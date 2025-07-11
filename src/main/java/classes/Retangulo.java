@@ -37,4 +37,9 @@ public class Retangulo {
     public void setBase(double base) {
         this.base = base;
     }
+
+    //Get area
+    public double getArea() {
+        return (getBase() * getAltura());
+    }
 }
