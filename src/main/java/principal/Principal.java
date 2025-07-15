@@ -3,7 +3,8 @@ package principal;
 // import classes.Retangulo;
 // import classes.Calculadora;
 // import classes.Funcionario;
-import classes.Data;
+// import classes.Data;
+import classes.Triangulo;
 import java.util.Scanner;
 
 public class Principal {
@@ -12,42 +13,54 @@ public class Principal {
         //Objeto para a entrada de dados
         Scanner scanner = new Scanner(System.in);
         
-        //Declara e instancia um objeto chamado d1 da classe Data
-        Data d1 = new Data();
+        //Declara e instancia um objeto chamado tri1 da classe Triângulo
+        Triangulo tri1 = new Triangulo();
         
-        //Realiza a leitura do dia, mês e ano        
-        System.out.println("Digite o dia:");
-        d1.setDia(scanner.nextInt());
-        System.out.println("Digite o mes:");
-        d1.setMes(scanner.nextInt());
-        System.out.println("Digite o ano:");
-        d1.setAno(scanner.nextInt());
+        //Realiza a leitura da base e altura
+        System.out.println("Digite a base:");
+        tri1.setBase(scanner.nextDouble());
         
+        System.out.println("Digite a altura:");
+        tri1.setAltura(scanner.nextDouble());
+        
+        //Escreve a área do triângulo
+        System.out.println("A área é " + tri1.getArea());
+        
+        // Declara e instancia um objeto chamado d1 da classe Data
+        // Data d1 = new Data();
+        
+        // Realiza a leitura do dia, mês e ano        
+        // System.out.println("Digite o dia:");
+        // d1.setDia(scanner.nextInt());
+        // System.out.println("Digite o mes:");
+        // d1.setMes(scanner.nextInt());
+        // System.out.println("Digite o ano:");
+        // d1.setAno(scanner.nextInt());
         //Escreve a data
-        System.out.println("A data " + d1.getDia() + "/" + d1.getMes() + "/" + d1.getAno());
+        // System.out.println("A data " + d1.getDia() + "/" + d1.getMes() + "/" + d1.getAno());
         //Verifica se o ano é bissexto
-        if (d1.getBissexto()){
-            System.out.println("O ano é bissexto");
-        } else {
-            System.out.println("O ano não é bissexto");
-        }
+        // if (d1.getBissexto()){
+        //     System.out.println("O ano é bissexto");
+        // } else {
+        //     System.out.println("O ano não é bissexto");
+        // }
 
-        //******** Leitura do objeto 1
-        //Declara e instancia um objeto chamado obj1 da classe Funcionário
+        // ******** Leitura do objeto 1
+        // Declara e instancia um objeto chamado obj1 da classe Funcionário
         // Funcionario obj1 = new Funcionario();
-        //******** Leitura do objeto 2
-        //Realiza a leitura da matrícula e nome do funcionário para o objeto 2
+        // ******** Leitura do objeto 2
+        // Realiza a leitura da matrícula e nome do funcionário para o objeto 2
         // System.out.println("Digite a matricula:");
         // int matricula = Integer.parseInt(scanner.nextLine());
         // System.out.println("Digite o nome:");
         // String nome = scanner.nextLine();
-        //Declara e instancia um objeto chamado obj2 da classe Funcionário usando o construtor com parâmetros
+        // Declara e instancia um objeto chamado obj2 da classe Funcionário usando o construtor com parâmetros
         // Funcionario obj2 = new Funcionario(matricula, nome);
-        //Saída de dados
-        //Escreve os dados default do objeto 1
+        // Saída de dados
+        // Escreve os dados default do objeto 1
         // System.out.println("Matricula:" + obj1.getMatricula());
         // System.out.println("Nome:" + obj1.getNome());
-        //Escreve os dados lidos objeto 2
+        // Escreve os dados lidos objeto 2
         // System.out.println("Matricula:" + obj2.getMatricula());
         // System.out.println("Nome:" + obj2.getNome());
 
