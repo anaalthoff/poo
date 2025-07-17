@@ -4,7 +4,8 @@ package principal;
 // import classes.Calculadora;
 // import classes.Funcionario;
 // import classes.Data;
-import classes.Triangulo;
+// import classes.Triangulo;
+import classes.Radio;
 import java.util.Scanner;
 
 public class Principal {
@@ -13,19 +14,36 @@ public class Principal {
         //Objeto para a entrada de dados
         Scanner scanner = new Scanner(System.in);
         
+        //Realiza a leitura do volume inicial do rádio
+        System.out.println("Digite o volume inicial:");
+        int volumeInicial = scanner.nextInt();
+        
+        //Declara e instancia um objeto chamado soni da classe Radio
+        Radio soni = new Radio(volumeInicial);
+
+        //Aumenta o volume em dois pontos
+        soni.aumentaVolume();
+        soni.aumentaVolume();
+        
+        //Mostra o volume
+        System.out.println(soni.getVolume());
+        
+        //Diminui o volume em dois pontos
+        soni.diminuiVolume();
+        soni.diminuiVolume();
+        
+        //Mostra o volume
+        System.out.println(soni.getVolume());
+        
         //Declara e instancia um objeto chamado tri1 da classe Triângulo
-        Triangulo tri1 = new Triangulo();
-        
+        // Triangulo tri1 = new Triangulo();
         //Realiza a leitura da base e altura
-        System.out.println("Digite a base:");
-        tri1.setBase(scanner.nextDouble());
-        
-        System.out.println("Digite a altura:");
-        tri1.setAltura(scanner.nextDouble());
-        
+        // System.out.println("Digite a base:");
+        // tri1.setBase(scanner.nextDouble());
+        // System.out.println("Digite a altura:");
+        // tri1.setAltura(scanner.nextDouble());
         //Escreve a área do triângulo
-        System.out.println("A área é " + tri1.getArea());
-        
+        // System.out.println("A área é " + tri1.getArea());
         // Declara e instancia um objeto chamado d1 da classe Data
         // Data d1 = new Data();
         
