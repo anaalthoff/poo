@@ -10,14 +10,14 @@ public class Triangulo implements ITriangulo {
 
     // Construtor sem parâmetros
     public Triangulo() {
-        setAltura(0);
-        setBase(0);
+        this.base = 0;
+        this.altura = 0;
     }
 
     // Construtor com parâmetros
     public Triangulo(double altura, double base) {
-        setAltura(altura);
-        setBase(base);
+        this.base = base;
+        this.altura = altura;
     }
 
     //gets e sets
