@@ -10,14 +10,14 @@ public class Calculadora implements ICalculadora {
 
     //Construtor sem parâmetros
     public Calculadora() {
-        setNumero1(0);
-        setNumero2(0);
+        this.numero1 = 0;
+        this.numero2 = 0;
     }
 
     //Construtor com parâmetros
     public Calculadora(double numero1, double numero2) {
-        setNumero1(numero1);
-        setNumero2(numero2);
+        this.numero1 = numero1;
+        this.numero2 = numero2;
     }
 
     //Get de numero1
