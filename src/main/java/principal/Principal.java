@@ -5,7 +5,9 @@ package principal;
 // import classes.Funcionario;
 // import classes.Data;
 // import classes.Triangulo;
-import classes.Radio;
+// import classes.Radio;
+import classes.FabricaVeiculos;
+import classes.Veiculo;
 import java.util.Scanner;
 
 public class Principal {
@@ -14,35 +16,64 @@ public class Principal {
         //Objeto para a entrada de dados
         Scanner scanner = new Scanner(System.in);
         
-        //Realiza a leitura do volume inicial do rádio
-        System.out.println("Digite o volume inicial:");
-        int volumeInicial = scanner.nextInt();
-        
-        //Declara e instancia um objeto chamado soni da classe Radio
-        Radio soni = new Radio(volumeInicial);
+        // Leitura do tipo de veículo
+        System.out.println("Digite o tipo de veículo que deseja fabricar (carro, moto ou caminhao):");
+        String tipoVeiculo = scanner.nextLine();
 
-        //Aumenta o volume em dois pontos
-        soni.aumentaVolume();
-        soni.aumentaVolume();
+        // Criação da fábrica de veículos com base no tipo informado
+        FabricaVeiculos fabrica = new FabricaVeiculos(tipoVeiculo);
+
+        // Definição do modelo
+        System.out.println("Digite o modelo do veículo:");
+        String modeloVeiculo = scanner.nextLine();
+        fabrica.setModelo(modeloVeiculo);
+
+        // Fabricação do veículo
+        Veiculo veiculo = null;
+        switch (tipoVeiculo) {
+            case "carro":
+                veiculo = fabrica.fabricaCarro();
+                break;
+            case "moto":
+                veiculo = fabrica.fabricaMoto();
+                break;
+            case "caminhao":
+                veiculo = fabrica.fabricaCaminhao();
+                break;
+            default:
+                System.out.println("Tipo de veículo não reconhecido.");
+        }
+
+        // Exibição do veículo fabricado
+        if (veiculo != null) {
+            System.out.println("Veículo fabricado:");
+            System.out.println(veiculo);
+        }
         
-        //Mostra o volume
-        System.out.println(soni.getVolume());
+        // Realiza a leitura do volume inicial do rádio
+        // System.out.println("Digite o volume inicial:");
+        // int volumeInicial = scanner.nextInt();
+        // Declara e instancia um objeto chamado soni da classe Radio
+        // Radio soni = new Radio(volumeInicial);
+        // Aumenta o volume em dois pontos
+        // soni.aumentaVolume();
+        // soni.aumentaVolume();
+        // Mostra o volume
+        // System.out.println(soni.getVolume());
+        // Diminui o volume em dois pontos
+        // soni.diminuiVolume();
+        // soni.diminuiVolume();
+        // Mostra o volume
+        // System.out.println(soni.getVolume());
         
-        //Diminui o volume em dois pontos
-        soni.diminuiVolume();
-        soni.diminuiVolume();
-        
-        //Mostra o volume
-        System.out.println(soni.getVolume());
-        
-        //Declara e instancia um objeto chamado tri1 da classe Triângulo
+        // Declara e instancia um objeto chamado tri1 da classe Triângulo
         // Triangulo tri1 = new Triangulo();
-        //Realiza a leitura da base e altura
+        // Realiza a leitura da base e altura
         // System.out.println("Digite a base:");
         // tri1.setBase(scanner.nextDouble());
         // System.out.println("Digite a altura:");
         // tri1.setAltura(scanner.nextDouble());
-        //Escreve a área do triângulo
+        // Escreve a área do triângulo
         // System.out.println("A área é " + tri1.getArea());
         // Declara e instancia um objeto chamado d1 da classe Data
         // Data d1 = new Data();
@@ -54,9 +85,9 @@ public class Principal {
         // d1.setMes(scanner.nextInt());
         // System.out.println("Digite o ano:");
         // d1.setAno(scanner.nextInt());
-        //Escreve a data
+        // Escreve a data
         // System.out.println("A data " + d1.getDia() + "/" + d1.getMes() + "/" + d1.getAno());
-        //Verifica se o ano é bissexto
+        // Verifica se o ano é bissexto
         // if (d1.getBissexto()){
         //     System.out.println("O ano é bissexto");
         // } else {
