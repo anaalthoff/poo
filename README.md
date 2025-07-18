@@ -12,28 +12,42 @@ O objetivo é consolidar conceitos fundamentais de orientação a objetos, atrav
 ## 🧠 Conteúdos abordados
 
 ✅ Introdução ao Java
+
 ✅ Classes, atributos e métodos
+
 ✅ Objetos e instanciamento
+
 ✅ Escopo e visibilidade
+
 ✅ Encapsulamento (`get` / `set`)
+
 ✅ Entrada e saída com `Scanner` e `JOptionPane`
+
 ✅ Estruturas de decisão e repetição (`if`, `switch`, `for`, `while`, `do while`)
+
 ✅ Vetores
+
 ✅ Associações entre classes (unidirecional, bidirecional)
+
 ✅ Agregação e Composição
+
 ✅ Dependência
+
 ✅ Herança e sobrescrita de métodos
+
 ✅ Versionamento com Git e GitHub
 
 ## 🗂️ Estrutura do Projeto
 
 src/
 
-├── principal/ # Contém classes com método main (execução)
+├── principal/ # Contém classes com método main (execução), separado por teste
 
 └── classes/ # Contém as classes utilizadas como modelo (ex: Retangulo, Triangulo, etc)
 
-> A estrutura irá ser complementada conforme os exemplos forem senod abordados: encapsulamento, herança, associação etc.
+└── interfaces/ # Contém as assinaturas dos métodos das classes (ex: IRetangulo, ITriangulo, etc)
+
+> A estrutura irá ser complementada conforme os exemplos forem sendo abordados: encapsulamento, herança, associação etc.
 
 ## 📌 Exemplos de classes
 
